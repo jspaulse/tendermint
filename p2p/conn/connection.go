@@ -352,7 +352,10 @@ FOR_LOOP:
 			c.flush()
 		case <-c.quit:
 			if c.pongTimer != nil {
-				_ = c.pongTimer.Stop()
+				if !c.pongTimer.Stop() {
+					<-c.pongTimer.C
+				}
+				drain(c.pongTimeoutCh)
 			}
 			break FOR_LOOP
 		case <-c.send:
@@ -487,7 +490,10 @@ FOR_LOOP:
 		case packetTypePong:
 			c.Logger.Debug("Receive Pong")
 			if c.pongTimer != nil {
-				_ = c.pongTimer.Stop()
+				if !c.pongTimer.Stop() {
+					<-c.pongTimer.C
+				}
+				drain(c.pongTimeoutCh)
 			}
 		case packetTypeMsg:
 			pkt, n, err := msgPacket{}, int(0), error(nil)
@@ -764,4 +770,14 @@ type msgPacket struct {
 
 func (p msgPacket) String() string {
 	return fmt.Sprintf("MsgPacket{%X:%X T:%X}", p.ChannelID, p.Bytes, p.EOF)
+}
+
+func drain(ch <-chan struct{}) {
+	for {
+		select {
+		case <-ch:
+		default:
+			return
+		}
+	}
 }
