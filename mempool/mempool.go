@@ -9,7 +9,7 @@ import (
 
 	abci "github.com/tendermint/abci/types"
 	auto "github.com/tendermint/go-autofile"
-	"github.com/tendermint/go-clist"
+	"github.com/tendermint/tmlibs/clist"
 	. "github.com/tendermint/go-common"
 	cfg "github.com/tendermint/go-config"
 	"github.com/tendermint/tendermint/proxy"
