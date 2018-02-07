@@ -35,8 +35,6 @@ import:
   version: develop
   subpackages:
   - app
-- package: github.com/golang/protobuf
-  version: 2402d76f3d41f928c7902a765dfc872356dd3aad
 - package: github.com/gogo/protobuf
   version: proto3.2.0
   subpackages:
