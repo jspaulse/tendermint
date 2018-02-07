@@ -19,11 +19,6 @@ imports:
   version: 100ba4e885062801d56799d78530b73b178a78f3
   subpackages:
   - proto
-- name: github.com/golang/protobuf
-  version: 2bba0603135d7d7f5cb73b2125beeda19c09f4ef
-  subpackages:
-  - proto
-  - ptypes/any
 - name: github.com/golang/snappy
   version: 553a641470496b2327abcac10b36396bd98e45c9
 - name: github.com/gorilla/websocket
