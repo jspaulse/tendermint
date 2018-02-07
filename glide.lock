@@ -158,8 +158,6 @@ imports:
   version: 411e09b969b1170a9f0c467558eb4c4c110d9c77
   subpackages:
   - googleapis/rpc/status
-- name: google.golang.org/grpc
-  version: 6914ab1e338c92da4218a23d27fcd03d0ad78d46
   subpackages:
   - codes
   - credentials
