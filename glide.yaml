@@ -23,7 +23,6 @@ import:
 - package: github.com/tendermint/go-p2p
   version: e8f33a47846708269d373f9c8080613d6c4f66b2
 - package: github.com/tendermint/go-rpc
-  version: 2c8df0ee6b60d8ac33662df13a4e358c679e02bf
 - package: github.com/tendermint/go-wire
   version: c1c9a57ab8038448ddea1714c0698f8051e5748c
 - package: github.com/tendermint/abci
