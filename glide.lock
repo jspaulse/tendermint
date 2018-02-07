@@ -104,12 +104,6 @@ imports:
   version: e8f33a47846708269d373f9c8080613d6c4f66b2
   subpackages:
   - upnp
-- name: github.com/tendermint/go-rpc
-  version: 2c8df0ee6b60d8ac33662df13a4e358c679e02bf
-  subpackages:
-  - client
-  - server
-  - types
 - name: github.com/tendermint/go-wire
   version: c1c9a57ab8038448ddea1714c0698f8051e5748c
 - name: github.com/tendermint/log15
